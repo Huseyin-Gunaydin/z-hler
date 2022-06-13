@@ -48,4 +48,4 @@ setInterval(function () {
   if (a == colors.length) a = 0;
   main.style.background = colors[a];
   a++;
-}, 1200);
+}, 2000);
