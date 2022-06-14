@@ -4,20 +4,23 @@ const reset = document.querySelector(".reset");
 
 let i = 0;
 
-azalt.addEventListener("click", function () {
-  i--;
-  document.querySelector("#value").innerHTML = i;
-  if (i < 0) {
-    value.style.color = "red";
-  }
-});
-
 artir.addEventListener("click", function () {
   i++;
   document.querySelector("#value").innerHTML = i;
+  azalt.disabled=false;
   if (i > 0) {
     value.style.color = "green";
   }
+});
+
+azalt.addEventListener("click", function () {
+
+  if (i==0 ){
+    azalt.disabled=true;
+  }
+
+  document.querySelector("#value").innerHTML = i; 
+  i--;
 });
 
 reset.addEventListener("click", function () {
@@ -28,7 +31,6 @@ reset.addEventListener("click", function () {
     value.style.color = "black";
   }
 });
-
 
 
 const main = document.querySelector("main");
